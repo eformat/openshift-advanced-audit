@@ -95,7 +95,7 @@ The `metadata-only-audit-config.yaml` file is more basic and only logs at a basi
 
 ### Examples
 
-The folder `./audit-logs` contains some generated audit logs from a `oc cluster up` lab (default admin, developer users)
+The folder `./audit-logs` contains some generated audit logs from a `oc cluster up` lab (default admin, developer users) - see `./test.sh`
 
 ```
 -- tests
