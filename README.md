@@ -70,7 +70,7 @@ https://github.com/kubernetes/kubernetes/blob/v1.8.0-beta.0/cluster/gce/gci/conf
 https://github.com/kubernetes/kubernetes/blob/master/cluster/gce/gci/configure-helper.sh#L734
 ```
 
-There audit policy file `audit-config.yaml` in this repo is a sensible starting point.
+The audit policy file `audit-config.yaml` in this repo is a sensible starting point.
 
 At a high level it enacts the following rules in top down order:
 
