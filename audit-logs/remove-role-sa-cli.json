@@ -1,0 +1,332 @@
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-18T05:44:37Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-18T05:44:37Z",
+  "auditID": "2c13b380-edfa-4cd8-89dd-cce272a3e4dc",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets",
+  "verb": "create",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-18T05:44:37Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-18T05:44:37Z",
+  "auditID": "18c51417-6018-4201-ad51-d4ca3bcd135c",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets",
+  "verb": "create",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-18T05:44:37Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-18T05:44:37Z",
+  "auditID": "18c51417-6018-4201-ad51-d4ca3bcd135c",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets",
+  "verb": "create",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "abc-service-account-token-qvtlp",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 201
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-18T05:44:37Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-18T05:44:37Z",
+  "auditID": "2c13b380-edfa-4cd8-89dd-cce272a3e4dc",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets",
+  "verb": "create",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "abc-service-account-token-ps7xr",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 201
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-18T05:44:37Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-18T05:44:37Z",
+  "auditID": "ada391ac-9d84-4d31-9fa7-9ed47bc87c8d",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets",
+  "verb": "create",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-18T05:44:37Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-18T05:44:37Z",
+  "auditID": "ada391ac-9d84-4d31-9fa7-9ed47bc87c8d",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets",
+  "verb": "create",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "abc-service-account-dockercfg-dxww6",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 201
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-18T05:44:50Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-18T05:44:50Z",
+  "auditID": "adff4053-376f-488b-bd1e-62466c0f6bfd",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings",
+  "verb": "list",
+  "user": {
+    "username": "developer",
+    "uid": "97232dd6-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:authenticated:oauth",
+      "system:authenticated"
+    ],
+    "extra": {
+      "scopes.authorization.openshift.io": [
+        "user:full"
+      ]
+    }
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "rolebindings",
+    "namespace": "foobar",
+    "apiVersion": "authorization.openshift.io/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-18T05:44:50Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-18T05:44:50Z",
+  "auditID": "adff4053-376f-488b-bd1e-62466c0f6bfd",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings",
+  "verb": "list",
+  "user": {
+    "username": "developer",
+    "uid": "97232dd6-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:authenticated:oauth",
+      "system:authenticated"
+    ],
+    "extra": {
+      "scopes.authorization.openshift.io": [
+        "user:full"
+      ]
+    }
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "rolebindings",
+    "namespace": "foobar",
+    "apiVersion": "authorization.openshift.io/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-18T05:44:50Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-18T05:44:50Z",
+  "auditID": "c6a37728-697f-4e29-afca-c21718948b26",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/view",
+  "verb": "update",
+  "user": {
+    "username": "developer",
+    "uid": "97232dd6-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:authenticated:oauth",
+      "system:authenticated"
+    ],
+    "extra": {
+      "scopes.authorization.openshift.io": [
+        "user:full"
+      ]
+    }
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "rolebindings",
+    "namespace": "foobar",
+    "name": "view",
+    "apiVersion": "authorization.openshift.io/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-18T05:44:50Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-18T05:44:50Z",
+  "auditID": "c6a37728-697f-4e29-afca-c21718948b26",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/view",
+  "verb": "update",
+  "user": {
+    "username": "developer",
+    "uid": "97232dd6-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:authenticated:oauth",
+      "system:authenticated"
+    ],
+    "extra": {
+      "scopes.authorization.openshift.io": [
+        "user:full"
+      ]
+    }
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "rolebindings",
+    "namespace": "foobar",
+    "name": "view",
+    "uid": "514d01d8-fc12-11e7-bdf2-9cb6d0f00109",
+    "apiVersion": "authorization.openshift.io/v

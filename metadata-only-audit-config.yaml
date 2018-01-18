@@ -1,0 +1,42 @@
+apiVersion: audit.k8s.io/v1alpha1
+kind: Policy
+rules:
+  # must be 1st rule; log request with empty user: authentication
+  - level: Metadata
+    users: [""]
+
+  # don't log periodic master and controllers status checks and updates
+  - level: None
+    userGroups:
+      - system:masters
+      - system:serviceaccounts:kube-system
+      - system:serviceaccounts:openshift-infra
+    verbs: ["get", "list", "watch", "update"]
+
+  # don't log periodic nodes status checks and updates
+  - level: None
+    userGroups:
+      - system:nodes
+    verbs: ["get", "patch", "watch", "update"]
+
+  # don't log router watch
+  - level: None
+    users:
+      - system:serviceaccount:default:router
+    verbs: ["watch", "list"]
+
+  # don't log these read-only URLs
+  - level: None
+    nonResourceURLs:
+      - /healthz*
+      - /version
+      - /swagger*
+
+  # don't log events requests
+  - level: None
+    resources:
+      - group: "" # core
+        resources: ["events"]
+
+  # lastly, catch-all rule to log all other requests at the Metadata level
+  - level: Metadata

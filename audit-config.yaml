@@ -1,0 +1,117 @@
+apiVersion: audit.k8s.io/v1alpha1
+kind: Policy
+rules:
+  # log request with empty user: authentication
+  - level: Metadata
+    users: [""]  
+
+  # don't log periodic master and controllers status checks and updates
+  - level: None
+    userGroups:
+      - system:masters
+      - system:serviceaccounts:kube-system
+      - system:serviceaccounts:openshift-infra
+    verbs: ["get", "list", "watch", "update"]
+
+  # don't log periodic nodes status checks and updates
+  - level: None
+    userGroups:
+      - system:nodes
+    verbs: ["get", "patch", "watch", "update"]
+
+  # don't log router watch
+  - level: None
+    users:
+      - system:serviceaccount:default:router
+    verbs: ["watch", "list"]
+
+  # don't log these read-only URLs
+  - level: None
+    nonResourceURLs:
+      - /healthz*
+      - /version
+      - /swagger*
+
+  # don't log events requests
+  - level: None
+    resources:
+      - group: "" # core
+        resources: ["events"]
+
+  # don't log HPA fetching metrics.
+  - level: None
+    users:
+      - system:kube-controller-manager
+    verbs: ["get", "list"]
+    resources:
+      - group: "metrics.k8s.io"
+
+  # deletecollection calls can be large, don't log responses for expected namespace deletions
+  - level: Request
+    users: ["system:serviceaccount:kube-system:namespace-controller"]
+    verbs: ["deletecollection"]
+    omitStages:
+      - "RequestReceived"
+
+  # Secrets, ConfigMaps, and TokenReviews can contain sensitive & binary data,
+  # so only log at the Metadata level.
+  - level: Metadata
+    resources:
+      - group: "" # core
+        resources: ["secrets", "configmaps"]
+      - group: authentication.k8s.io
+        resources: ["tokenreviews"]
+    omitStages:
+      - "RequestReceived"
+
+  # get repsonses can be large; skip them.
+  - level: Request
+    verbs: ["get", "list", "watch"]
+    resources:
+      - group: "" # core
+      - group: "admissionregistration.k8s.io"
+      - group: "apiextensions.k8s.io"
+      - group: "apiregistration.k8s.io"
+      - group: "apps"
+      - group: "authentication.k8s.io"
+      - group: "authorization.k8s.io"
+      - group: "autoscaling"
+      - group: "batch"
+      - group: "certificates.k8s.io"
+      - group: "extensions"
+      - group: "metrics.k8s.io"
+      - group: "networking.k8s.io"
+      - group: "policy"
+      - group: "rbac.authorization.k8s.io"
+      - group: "settings.k8s.io"
+      - group: "storage.k8s.io"
+    omitStages:
+      - "RequestReceived"
+
+  # default level for known APIs
+  - level: RequestResponse
+    resources:
+      - group: "" # core
+      - group: "admissionregistration.k8s.io"
+      - group: "apiextensions.k8s.io"
+      - group: "apiregistration.k8s.io"
+      - group: "apps"
+      - group: "authentication.k8s.io"
+      - group: "authorization.k8s.io"
+      - group: "autoscaling"
+      - group: "batch"
+      - group: "certificates.k8s.io"
+      - group: "extensions"
+      - group: "metrics.k8s.io"
+      - group: "networking.k8s.io"
+      - group: "policy"
+      - group: "rbac.authorization.k8s.io"
+      - group: "settings.k8s.io"
+      - group: "storage.k8s.io"      
+    omitStages:
+      - "RequestReceived"
+
+  # default level for all other requests.
+  - level: Metadata
+    omitStages:
+      - "RequestReceived"
