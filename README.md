@@ -10,6 +10,8 @@ Latest Document links:
 - https://docs.openshift.org/latest/install_config/master_node_configuration.html#master-node-config-advanced-audit
 - https://kubernetes.io/docs/tasks/debug-application-cluster/audit/#advanced-audit
 
+Tested api version against OCP-3.7.14 (audit.k8s.io/v1alpha1) - upstream 1.8/1.9 (audit.k8s.io/v1beta1)
+
 Advanced audit helps answer the questions:
 
 - what happened?
