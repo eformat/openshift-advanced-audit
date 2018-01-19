@@ -69,7 +69,7 @@ rm -f cat $DIR/.delete-secret-cli.json
 $SLEEP2
 
 echo ">>> create-sa"
-sudo tail -f /var/log/openshift/advanced-audit.log > $DIR/.create-sa-cli.json &
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log > $DIR/.create-sa-cli.json &
 PROC=$!
 oc create sa abc-service-account
 $SLEEP1
