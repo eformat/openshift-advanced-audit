@@ -2,11 +2,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:49:48Z"
+    "creationTimestamp": "2018-01-19T01:04:07Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:49:48Z",
-  "auditID": "1c96d462-47af-4a7f-bdb5-1db8063cfc37",
+  "timestamp": "2018-01-19T01:04:07Z",
+  "auditID": "4cc5c62b-f6e3-4750-a341-7251aff2a280",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -32,11 +32,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:49:48Z"
+    "creationTimestamp": "2018-01-19T01:04:07Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:49:48Z",
-  "auditID": "1c96d462-47af-4a7f-bdb5-1db8063cfc37",
+  "timestamp": "2018-01-19T01:04:07Z",
+  "auditID": "4cc5c62b-f6e3-4750-a341-7251aff2a280",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -55,7 +55,7 @@
   "objectRef": {
     "resource": "secrets",
     "namespace": "foobar",
-    "name": "builder-dockercfg-654zv",
+    "name": "default-dockercfg-jw5gk",
     "apiVersion": "/v1"
   },
   "responseStatus": {
@@ -67,11 +67,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:49:48Z"
+    "creationTimestamp": "2018-01-19T01:04:07Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:49:48Z",
-  "auditID": "41e3d2e4-211f-458d-b635-ec3a05bddd1d",
+  "timestamp": "2018-01-19T01:04:07Z",
+  "auditID": "197d60d7-c43c-4342-8009-4d495189fc41",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -97,11 +97,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:49:48Z"
+    "creationTimestamp": "2018-01-19T01:04:07Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:49:48Z",
-  "auditID": "41e3d2e4-211f-458d-b635-ec3a05bddd1d",
+  "timestamp": "2018-01-19T01:04:07Z",
+  "auditID": "197d60d7-c43c-4342-8009-4d495189fc41",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -120,7 +120,7 @@
   "objectRef": {
     "resource": "secrets",
     "namespace": "foobar",
-    "name": "deployer-dockercfg-k968x",
+    "name": "builder-dockercfg-7k46g",
     "apiVersion": "/v1"
   },
   "responseStatus": {
@@ -132,11 +132,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:49:48Z"
+    "creationTimestamp": "2018-01-19T01:04:07Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:49:48Z",
-  "auditID": "03324ad3-8624-43f9-844c-60ab63ffaaaf",
+  "timestamp": "2018-01-19T01:04:07Z",
+  "auditID": "c78d3ca0-a76b-408b-9c5c-400994e8ec62",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -162,11 +162,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:49:48Z"
+    "creationTimestamp": "2018-01-19T01:04:07Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:49:48Z",
-  "auditID": "03324ad3-8624-43f9-844c-60ab63ffaaaf",
+  "timestamp": "2018-01-19T01:04:07Z",
+  "auditID": "c78d3ca0-a76b-408b-9c5c-400994e8ec62",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -185,7 +185,7 @@
   "objectRef": {
     "resource": "secrets",
     "namespace": "foobar",
-    "name": "default-dockercfg-wbpqp",
+    "name": "deployer-dockercfg-w4n67",
     "apiVersion": "/v1"
   },
   "responseStatus": {
@@ -197,11 +197,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:49:56Z"
+    "creationTimestamp": "2018-01-19T01:04:27Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:49:56Z",
-  "auditID": "71870146-a941-4031-b69b-e6da7e84a9d2",
+  "timestamp": "2018-01-19T01:04:27Z",
+  "auditID": "868286f0-bfbd-4b09-b19b-066f4ecaf8fc",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -231,11 +231,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:49:56Z"
+    "creationTimestamp": "2018-01-19T01:04:27Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:49:56Z",
-  "auditID": "71870146-a941-4031-b69b-e6da7e84a9d2",
+  "timestamp": "2018-01-19T01:04:27Z",
+  "auditID": "868286f0-bfbd-4b09-b19b-066f4ecaf8fc",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -270,11 +270,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:03Z"
+    "creationTimestamp": "2018-01-19T01:04:47Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:03Z",
-  "auditID": "13bd6e5b-6710-4aa2-b6d6-c76925ee21e8",
+  "timestamp": "2018-01-19T01:04:47Z",
+  "auditID": "b021704d-970c-4304-a764-79c7b73d0eac",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar/secrets/my-secret",
   "verb": "delete",
@@ -305,11 +305,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:03Z"
+    "creationTimestamp": "2018-01-19T01:04:47Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:03Z",
-  "auditID": "13bd6e5b-6710-4aa2-b6d6-c76925ee21e8",
+  "timestamp": "2018-01-19T01:04:47Z",
+  "auditID": "b021704d-970c-4304-a764-79c7b73d0eac",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar/secrets/my-secret",
   "verb": "delete",
@@ -344,11 +344,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:10Z"
+    "creationTimestamp": "2018-01-19T01:05:18Z"
   },
   "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:10Z",
-  "auditID": "9aad8fb5-a628-4e15-82b5-82488ef45b0c",
+  "timestamp": "2018-01-19T01:05:18Z",
+  "auditID": "b47bfe2c-c871-4897-9ffc-a20e69cd006f",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar/serviceaccounts",
   "verb": "create",
@@ -378,11 +378,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:10Z"
+    "creationTimestamp": "2018-01-19T01:05:18Z"
   },
   "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:10Z",
-  "auditID": "9aad8fb5-a628-4e15-82b5-82488ef45b0c",
+  "timestamp": "2018-01-19T01:05:18Z",
+  "auditID": "b47bfe2c-c871-4897-9ffc-a20e69cd006f",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar/serviceaccounts",
   "verb": "create",
@@ -427,9 +427,9 @@
       "name": "abc-service-account",
       "namespace": "foobar",
       "selfLink": "/api/v1/namespaces/foobar/serviceaccounts/abc-service-account",
-      "uid": "f90f914d-fc34-11e7-bdf2-9cb6d0f00109",
-      "resourceVersion": "134102",
-      "creationTimestamp": "2018-01-18T09:50:10Z"
+      "uid": "d080bf49-fcb4-11e7-8974-9cb6d0f00109",
+      "resourceVersion": "190114",
+      "creationTimestamp": "2018-01-19T01:05:18Z"
     }
   }
 }
@@ -437,11 +437,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:10Z"
+    "creationTimestamp": "2018-01-19T01:05:18Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:10Z",
-  "auditID": "87819dfd-0701-4eca-a6af-0f3a2a8ba6b7",
+  "timestamp": "2018-01-19T01:05:18Z",
+  "auditID": "1e6c924d-7ef4-4d7d-95a4-9871f77fccbd",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -467,11 +467,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:10Z"
+    "creationTimestamp": "2018-01-19T01:05:18Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:10Z",
-  "auditID": "fb27ccf2-e045-497d-bf4c-2086ac473274",
+  "timestamp": "2018-01-19T01:05:18Z",
+  "auditID": "56b1f0ab-b510-4ebc-a314-c0de31f29934",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -495,11 +495,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:10Z"
+    "creationTimestamp": "2018-01-19T01:05:18Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:10Z",
-  "auditID": "87819dfd-0701-4eca-a6af-0f3a2a8ba6b7",
+  "timestamp": "2018-01-19T01:05:18Z",
+  "auditID": "1e6c924d-7ef4-4d7d-95a4-9871f77fccbd",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -518,7 +518,7 @@
   "objectRef": {
     "resource": "secrets",
     "namespace": "foobar",
-    "name": "abc-service-account-token-djbnn",
+    "name": "abc-service-account-token-5g72x",
     "apiVersion": "/v1"
   },
   "responseStatus": {
@@ -530,11 +530,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:10Z"
+    "creationTimestamp": "2018-01-19T01:05:18Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:10Z",
-  "auditID": "fb27ccf2-e045-497d-bf4c-2086ac473274",
+  "timestamp": "2018-01-19T01:05:18Z",
+  "auditID": "56b1f0ab-b510-4ebc-a314-c0de31f29934",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -551,7 +551,7 @@
   "objectRef": {
     "resource": "secrets",
     "namespace": "foobar",
-    "name": "abc-service-account-token-7pj62",
+    "name": "abc-service-account-token-dbzpr",
     "apiVersion": "/v1"
   },
   "responseStatus": {
@@ -563,11 +563,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:10Z"
+    "creationTimestamp": "2018-01-19T01:05:18Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:10Z",
-  "auditID": "ab356a36-f10f-4b73-ae9c-a72cec5720dd",
+  "timestamp": "2018-01-19T01:05:18Z",
+  "auditID": "f84be470-6ab6-4adb-9a51-18ed84828629",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -593,11 +593,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:10Z"
+    "creationTimestamp": "2018-01-19T01:05:18Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:10Z",
-  "auditID": "ab356a36-f10f-4b73-ae9c-a72cec5720dd",
+  "timestamp": "2018-01-19T01:05:18Z",
+  "auditID": "f84be470-6ab6-4adb-9a51-18ed84828629",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "create",
@@ -616,7 +616,7 @@
   "objectRef": {
     "resource": "secrets",
     "namespace": "foobar",
-    "name": "abc-service-account-dockercfg-9vw85",
+    "name": "abc-service-account-dockercfg-mv4d2",
     "apiVersion": "/v1"
   },
   "responseStatus": {

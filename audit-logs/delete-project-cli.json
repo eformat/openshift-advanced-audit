@@ -2,371 +2,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:32Z"
+    "creationTimestamp": "2018-01-19T01:06:59Z"
   },
   "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:32Z",
-  "auditID": "b98b85e0-0630-4950-9f3d-15b30c9455e9",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/serviceaccounts/abc-service-account",
-  "verb": "delete",
-  "user": {
-    "username": "developer",
-    "uid": "97232dd6-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:authenticated:oauth",
-      "system:authenticated"
-    ],
-    "extra": {
-      "scopes.authorization.openshift.io": [
-        "user:full"
-      ]
-    }
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "serviceaccounts",
-    "namespace": "foobar",
-    "name": "abc-service-account",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:32Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:32Z",
-  "auditID": "b98b85e0-0630-4950-9f3d-15b30c9455e9",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/serviceaccounts/abc-service-account",
-  "verb": "delete",
-  "user": {
-    "username": "developer",
-    "uid": "97232dd6-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:authenticated:oauth",
-      "system:authenticated"
-    ],
-    "extra": {
-      "scopes.authorization.openshift.io": [
-        "user:full"
-      ]
-    }
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "serviceaccounts",
-    "namespace": "foobar",
-    "name": "abc-service-account",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "v1",
-    "orphanDependents": false
-  },
-  "responseObject": {
-    "kind": "ServiceAccount",
-    "apiVersion": "v1",
-    "metadata": {
-      "name": "abc-service-account",
-      "namespace": "foobar",
-      "selfLink": "/api/v1/namespaces/foobar/serviceaccounts/abc-service-account",
-      "uid": "f90f914d-fc34-11e7-bdf2-9cb6d0f00109",
-      "resourceVersion": "134109",
-      "creationTimestamp": "2018-01-18T09:50:10Z"
-    },
-    "secrets": [
-      {
-        "name": "abc-service-account-dockercfg-9vw85"
-      },
-      {
-        "name": "abc-service-account-token-7pj62"
-      }
-    ],
-    "imagePullSecrets": [
-      {
-        "name": "abc-service-account-dockercfg-9vw85"
-      }
-    ]
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:32Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:32Z",
-  "auditID": "0d8cff04-2609-4b13-bf49-4bba828539dd",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/abc-service-account-token-7pj62",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "abc-service-account-token-7pj62",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:32Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:32Z",
-  "auditID": "0d8cff04-2609-4b13-bf49-4bba828539dd",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/abc-service-account-token-7pj62",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "abc-service-account-token-7pj62",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:32Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:32Z",
-  "auditID": "81279901-4d5e-4bdc-b481-7c5a8a84d560",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/abc-service-account-token-djbnn",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "abc-service-account-token-djbnn",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:32Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:32Z",
-  "auditID": "81279901-4d5e-4bdc-b481-7c5a8a84d560",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/abc-service-account-token-djbnn",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "abc-service-account-token-djbnn",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:32Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:32Z",
-  "auditID": "4a67a4ac-01b3-4379-9b24-ff799421cd85",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/abc-service-account-dockercfg-9vw85",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
-    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:openshift-infra",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "abc-service-account-dockercfg-9vw85",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:32Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:32Z",
-  "auditID": "4a67a4ac-01b3-4379-9b24-ff799421cd85",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/abc-service-account-dockercfg-9vw85",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
-    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:openshift-infra",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "abc-service-account-dockercfg-9vw85",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:32Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:32Z",
-  "auditID": "8384b317-2b31-4826-8157-21e37ddf2173",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/abc-service-account-token-djbnn",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
-    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:openshift-infra",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "abc-service-account-token-djbnn",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:32Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:32Z",
-  "auditID": "8384b317-2b31-4826-8157-21e37ddf2173",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/abc-service-account-token-djbnn",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
-    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:openshift-infra",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "abc-service-account-token-djbnn",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 404
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:39Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:39Z",
-  "auditID": "b4245136-8cc1-4c78-a367-5b23dadf37e8",
+  "timestamp": "2018-01-19T01:06:59Z",
+  "auditID": "e7b7edcf-45f2-42e1-b5ca-799b9b516802",
   "stage": "RequestReceived",
   "requestURI": "/oapi/v1/projects/foobar",
   "verb": "delete",
@@ -397,11 +37,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:39Z"
+    "creationTimestamp": "2018-01-19T01:06:59Z"
   },
   "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:39Z",
-  "auditID": "aba2e804-d01e-4834-b421-c11baf6e14ba",
+  "timestamp": "2018-01-19T01:06:59Z",
+  "auditID": "c8183f62-d907-4204-909c-b4a2cacda5ee",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar",
   "verb": "delete",
@@ -426,11 +66,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:39Z"
+    "creationTimestamp": "2018-01-19T01:06:59Z"
   },
   "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:39Z",
-  "auditID": "aba2e804-d01e-4834-b421-c11baf6e14ba",
+  "timestamp": "2018-01-19T01:06:59Z",
+  "auditID": "c8183f62-d907-4204-909c-b4a2cacda5ee",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar",
   "verb": "delete",
@@ -460,17 +100,17 @@
     "metadata": {
       "name": "foobar",
       "selfLink": "/api/v1/namespaces/foobar",
-      "uid": "ec210de3-fc34-11e7-bdf2-9cb6d0f00109",
-      "resourceVersion": "134147",
-      "creationTimestamp": "2018-01-18T09:49:48Z",
-      "deletionTimestamp": "2018-01-18T09:50:39Z",
+      "uid": "a650db95-fcb4-11e7-8974-9cb6d0f00109",
+      "resourceVersion": "190232",
+      "creationTimestamp": "2018-01-19T01:04:07Z",
+      "deletionTimestamp": "2018-01-19T01:06:59Z",
       "annotations": {
         "openshift.io/description": "",
         "openshift.io/display-name": "",
         "openshift.io/requester": "developer",
-        "openshift.io/sa.scc.mcs": "s0:c13,c7",
-        "openshift.io/sa.scc.supplemental-groups": "1000170000/10000",
-        "openshift.io/sa.scc.uid-range": "1000170000/10000"
+        "openshift.io/sa.scc.mcs": "s0:c12,c4",
+        "openshift.io/sa.scc.supplemental-groups": "1000140000/10000",
+        "openshift.io/sa.scc.uid-range": "1000140000/10000"
       }
     },
     "spec": {
@@ -488,11 +128,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:39Z"
+    "creationTimestamp": "2018-01-19T01:06:59Z"
   },
   "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:39Z",
-  "auditID": "b4245136-8cc1-4c78-a367-5b23dadf37e8",
+  "timestamp": "2018-01-19T01:06:59Z",
+  "auditID": "e7b7edcf-45f2-42e1-b5ca-799b9b516802",
   "stage": "ResponseComplete",
   "requestURI": "/oapi/v1/projects/foobar",
   "verb": "delete",
@@ -534,1984 +174,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "b1bee027-4bdd-4c81-997b-83808736192a",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/daemonsets",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "daemonsets",
-    "namespace": "foobar",
-    "apiVersion": "extensions/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "b1bee027-4bdd-4c81-997b-83808736192a",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/daemonsets",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "daemonsets",
-    "namespace": "foobar",
-    "apiVersion": "extensions/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "extensions/v1beta1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "3b3e72dc-45a1-4a06-bea0-7c7b5a12e6f5",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/apps/v1beta1/namespaces/foobar/controllerrevisions",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "controllerrevisions",
-    "namespace": "foobar",
-    "apiVersion": "apps/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "3b3e72dc-45a1-4a06-bea0-7c7b5a12e6f5",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/apps/v1beta1/namespaces/foobar/controllerrevisions",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "controllerrevisions",
-    "namespace": "foobar",
-    "apiVersion": "apps/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "apps/v1beta1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "d933913b-31f1-41fb-addd-f7d2d908f8c8",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/batch/v1/namespaces/foobar/jobs",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "jobs",
-    "namespace": "foobar",
-    "apiVersion": "batch/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "d933913b-31f1-41fb-addd-f7d2d908f8c8",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/batch/v1/namespaces/foobar/jobs",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "jobs",
-    "namespace": "foobar",
-    "apiVersion": "batch/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "batch/v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "feff400a-a572-47a8-b581-04b796a2a8d2",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/networking.k8s.io/v1/namespaces/foobar/networkpolicies",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "networkpolicies",
-    "namespace": "foobar",
-    "apiVersion": "networking.k8s.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "feff400a-a572-47a8-b581-04b796a2a8d2",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/networking.k8s.io/v1/namespaces/foobar/networkpolicies",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "networkpolicies",
-    "namespace": "foobar",
-    "apiVersion": "networking.k8s.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "networking.k8s.io/v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "f88ba771-d4c1-41e3-9543-b833ebf58e85",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/admin",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "admin",
-    "apiVersion": "authorization.openshift.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "5a1a36ad-5d64-4e58-bcbb-dc2ff7d3a774",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings/admin",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "impersonatedUser": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "admin",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "5a1a36ad-5d64-4e58-bcbb-dc2ff7d3a774",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings/admin",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "impersonatedUser": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "admin",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "status": "Success",
-    "details": {
-      "name": "admin",
-      "group": "rbac.authorization.k8s.io",
-      "kind": "rolebindings",
-      "uid": "ec2252c4-fc34-11e7-bdf2-9cb6d0f00109"
-    },
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1",
-    "propagationPolicy": "Background"
-  },
-  "responseObject": {
-    "kind": "Status",
-    "apiVersion": "v1",
-    "metadata": {},
-    "status": "Success",
-    "details": {
-      "name": "admin",
-      "group": "rbac.authorization.k8s.io",
-      "kind": "rolebindings",
-      "uid": "ec2252c4-fc34-11e7-bdf2-9cb6d0f00109"
-    }
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "f88ba771-d4c1-41e3-9543-b833ebf58e85",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/admin",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "admin",
-    "apiVersion": "authorization.openshift.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "9e7d8c0c-a8b7-4a15-8215-9a081399797c",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/system:deployers",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:deployers",
-    "apiVersion": "authorization.openshift.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "69d32ca6-9933-4ec5-9c54-1d5fbf2fc840",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings/system:deployers",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "impersonatedUser": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:deployers",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "69d32ca6-9933-4ec5-9c54-1d5fbf2fc840",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings/system:deployers",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "impersonatedUser": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:deployers",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "status": "Success",
-    "details": {
-      "name": "system:deployers",
-      "group": "rbac.authorization.k8s.io",
-      "kind": "rolebindings",
-      "uid": "ec221454-fc34-11e7-bdf2-9cb6d0f00109"
-    },
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1",
-    "propagationPolicy": "Background"
-  },
-  "responseObject": {
-    "kind": "Status",
-    "apiVersion": "v1",
-    "metadata": {},
-    "status": "Success",
-    "details": {
-      "name": "system:deployers",
-      "group": "rbac.authorization.k8s.io",
-      "kind": "rolebindings",
-      "uid": "ec221454-fc34-11e7-bdf2-9cb6d0f00109"
-    }
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "9e7d8c0c-a8b7-4a15-8215-9a081399797c",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/system:deployers",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:deployers",
-    "apiVersion": "authorization.openshift.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "dd6c81ec-61d1-488f-bed1-7a89880401e1",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/system:image-builders",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:image-builders",
-    "apiVersion": "authorization.openshift.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "83238a25-2a7a-4c7b-a9e7-408173367235",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings/system:image-builders",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "impersonatedUser": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:image-builders",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "83238a25-2a7a-4c7b-a9e7-408173367235",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings/system:image-builders",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "impersonatedUser": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:image-builders",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "status": "Success",
-    "details": {
-      "name": "system:image-builders",
-      "group": "rbac.authorization.k8s.io",
-      "kind": "rolebindings",
-      "uid": "ec21bf10-fc34-11e7-bdf2-9cb6d0f00109"
-    },
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1",
-    "propagationPolicy": "Background"
-  },
-  "responseObject": {
-    "kind": "Status",
-    "apiVersion": "v1",
-    "metadata": {},
-    "status": "Success",
-    "details": {
-      "name": "system:image-builders",
-      "group": "rbac.authorization.k8s.io",
-      "kind": "rolebindings",
-      "uid": "ec21bf10-fc34-11e7-bdf2-9cb6d0f00109"
-    }
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "dd6c81ec-61d1-488f-bed1-7a89880401e1",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/system:image-builders",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:image-builders",
-    "apiVersion": "authorization.openshift.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "8dd5d8ae-1415-46c5-b919-c802ac27539a",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/system:image-pullers",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:image-pullers",
-    "apiVersion": "authorization.openshift.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "0272f633-6049-43c0-a83b-563b190640be",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings/system:image-pullers",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "impersonatedUser": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:image-pullers",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "0272f633-6049-43c0-a83b-563b190640be",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings/system:image-pullers",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "impersonatedUser": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:image-pullers",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "status": "Success",
-    "details": {
-      "name": "system:image-pullers",
-      "group": "rbac.authorization.k8s.io",
-      "kind": "rolebindings",
-      "uid": "ec215cdd-fc34-11e7-bdf2-9cb6d0f00109"
-    },
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1",
-    "propagationPolicy": "Background"
-  },
-  "responseObject": {
-    "kind": "Status",
-    "apiVersion": "v1",
-    "metadata": {},
-    "status": "Success",
-    "details": {
-      "name": "system:image-pullers",
-      "group": "rbac.authorization.k8s.io",
-      "kind": "rolebindings",
-      "uid": "ec215cdd-fc34-11e7-bdf2-9cb6d0f00109"
-    }
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "8dd5d8ae-1415-46c5-b919-c802ac27539a",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/system:image-pullers",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "system:image-pullers",
-    "apiVersion": "authorization.openshift.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "161dfbc7-093c-4beb-8783-02f5d200d8a4",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/view",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "view",
-    "apiVersion": "authorization.openshift.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "64164a8d-4c22-4293-a6f9-884cdd299794",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings/view",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "impersonatedUser": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "view",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "64164a8d-4c22-4293-a6f9-884cdd299794",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings/view",
-  "verb": "delete",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "impersonatedUser": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "view",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "status": "Success",
-    "details": {
-      "name": "view",
-      "group": "rbac.authorization.k8s.io",
-      "kind": "rolebindings",
-      "uid": "fd6fadd1-fc34-11e7-bdf2-9cb6d0f00109"
-    },
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1",
-    "propagationPolicy": "Background"
-  },
-  "responseObject": {
-    "kind": "Status",
-    "apiVersion": "v1",
-    "metadata": {},
-    "status": "Success",
-    "details": {
-      "name": "view",
-      "group": "rbac.authorization.k8s.io",
-      "kind": "rolebindings",
-      "uid": "fd6fadd1-fc34-11e7-bdf2-9cb6d0f00109"
-    }
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "161dfbc7-093c-4beb-8783-02f5d200d8a4",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindings/view",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "name": "view",
-    "apiVersion": "authorization.openshift.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "838208a7-eaf7-44ed-8bc9-d9104f81c4e6",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/route.openshift.io/v1/namespaces/foobar/routes",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "routes",
-    "namespace": "foobar",
-    "apiVersion": "route.openshift.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "838208a7-eaf7-44ed-8bc9-d9104f81c4e6",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/route.openshift.io/v1/namespaces/foobar/routes",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "routes",
-    "namespace": "foobar",
-    "apiVersion": "route.openshift.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "route.openshift.io/v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "18742a7e-3842-41a4-b6f8-decdc6795bff",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/persistentvolumeclaims",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "persistentvolumeclaims",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "18742a7e-3842-41a4-b6f8-decdc6795bff",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/persistentvolumeclaims",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "persistentvolumeclaims",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "dc9437ba-955d-40ea-9229-1599532bad9c",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/replicasets",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "replicasets",
-    "namespace": "foobar",
-    "apiVersion": "extensions/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "dc9437ba-955d-40ea-9229-1599532bad9c",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/replicasets",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "replicasets",
-    "namespace": "foobar",
-    "apiVersion": "extensions/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "extensions/v1beta1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "2bf51b5d-7953-4eb2-924c-ada957702389",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "1d0f47d2-b33c-446f-887e-99376d3657d6",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "1d0f47d2-b33c-446f-887e-99376d3657d6",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "builder-token-hlj2j",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 403
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "a8f291c8-e62f-4db2-b69e-5924961be401",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "a8f291c8-e62f-4db2-b69e-5924961be401",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "default-token-f2htk",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 403
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "2bf51b5d-7953-4eb2-924c-ada957702389",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "f317f201-9333-4fd2-b143-6513e84a95cd",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/endpoints",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "endpoints",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "a30375a3-8c8f-4527-988d-a1505a5ab0a3",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "f317f201-9333-4fd2-b143-6513e84a95cd",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/endpoints",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "endpoints",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "a30375a3-8c8f-4527-988d-a1505a5ab0a3",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "builder-token-tgnln",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 403
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "0a9ea3d0-ac33-4525-af60-3c1d4a7038a3",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/deployments",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "deployments",
-    "namespace": "foobar",
-    "apiVersion": "extensions/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "0a9ea3d0-ac33-4525-af60-3c1d4a7038a3",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/deployments",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "deployments",
-    "namespace": "foobar",
-    "apiVersion": "extensions/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "extensions/v1beta1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "6c20f77a-679d-425c-afb5-a732857f2fa8",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "6c20f77a-679d-425c-afb5-a732857f2fa8",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "deployer-token-ht9bd",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 403
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "3f09616d-1ffc-4d9b-b925-2b10aea6b6d1",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/roles",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "roles",
-    "namespace": "foobar",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "a75fd977-dae9-4ec4-a023-f49bc8dec9b6",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "a75fd977-dae9-4ec4-a023-f49bc8dec9b6",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "default-token-d8fvc",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 403
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "3f09616d-1ffc-4d9b-b925-2b10aea6b6d1",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/roles",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "roles",
-    "namespace": "foobar",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "c631fb63-d927-4d52-9ef3-2afe1d69d788",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/template.openshift.io/v1/namespaces/foobar/templateinstances",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "templateinstances",
-    "namespace": "foobar",
-    "apiVersion": "template.openshift.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "c631fb63-d927-4d52-9ef3-2afe1d69d788",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/template.openshift.io/v1/namespaces/foobar/templateinstances",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "templateinstances",
-    "namespace": "foobar",
-    "apiVersion": "template.openshift.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "template.openshift.io/v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "dcdaeab5-c3c1-4137-bb1a-e3c7662fea66",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "fd6f6975-6e76-4b51-be08-e8467b09d0ba",
   "stage": "RequestReceived",
   "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/networkpolicies",
   "verb": "deletecollection",
@@ -2537,11 +204,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "dcdaeab5-c3c1-4137-bb1a-e3c7662fea66",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "fd6f6975-6e76-4b51-be08-e8467b09d0ba",
   "stage": "ResponseComplete",
   "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/networkpolicies",
   "verb": "deletecollection",
@@ -2576,13 +243,13 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "cea4d690-1243-4b95-a136-a99edff7e9ed",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "1a1cf5ed-727f-4be0-b5d1-eb6970464450",
   "stage": "RequestReceived",
-  "requestURI": "/apis/build.openshift.io/v1/namespaces/foobar/builds",
+  "requestURI": "/apis/build.openshift.io/v1/namespaces/foobar/buildconfigs",
   "verb": "deletecollection",
   "user": {
     "username": "system:serviceaccount:kube-system:namespace-controller",
@@ -2597,7 +264,7 @@
     "127.0.0.1"
   ],
   "objectRef": {
-    "resource": "builds",
+    "resource": "buildconfigs",
     "namespace": "foobar",
     "apiVersion": "build.openshift.io/v1"
   }
@@ -2606,13 +273,13 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "cea4d690-1243-4b95-a136-a99edff7e9ed",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "1a1cf5ed-727f-4be0-b5d1-eb6970464450",
   "stage": "ResponseComplete",
-  "requestURI": "/apis/build.openshift.io/v1/namespaces/foobar/builds",
+  "requestURI": "/apis/build.openshift.io/v1/namespaces/foobar/buildconfigs",
   "verb": "deletecollection",
   "user": {
     "username": "system:serviceaccount:kube-system:namespace-controller",
@@ -2627,7 +294,7 @@
     "127.0.0.1"
   ],
   "objectRef": {
-    "resource": "builds",
+    "resource": "buildconfigs",
     "namespace": "foobar",
     "apiVersion": "build.openshift.io/v1"
   },
@@ -2645,332 +312,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "0cd55e84-f995-4985-8af8-734b3aa72fd2",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "d98846a8-c3da-4d3e-ae57-f6db95972f56",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/template.openshift.io/v1/namespaces/foobar/templates",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "templates",
-    "namespace": "foobar",
-    "apiVersion": "template.openshift.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "0cd55e84-f995-4985-8af8-734b3aa72fd2",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "deployer-token-8dz8g",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 403
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "e217673b-6a38-47c2-aaba-276a27e0234c",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "d98846a8-c3da-4d3e-ae57-f6db95972f56",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/template.openshift.io/v1/namespaces/foobar/templates",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "templates",
-    "namespace": "foobar",
-    "apiVersion": "template.openshift.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "template.openshift.io/v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "e217673b-6a38-47c2-aaba-276a27e0234c",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "builder-token-z4twt",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 403
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "c408d6d7-a148-404c-aab7-0cfc902ce336",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/limitranges",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "limitranges",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "c408d6d7-a148-404c-aab7-0cfc902ce336",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/limitranges",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "limitranges",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "dde9dd99-4da6-47a4-8036-ebd0e5de18c6",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "dde9dd99-4da6-47a4-8036-ebd0e5de18c6",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
-  "user": {
-    "username": "system:openshift-master",
-    "groups": [
-      "system:masters",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "default-token-wh49p",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 403
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "e0848774-c39c-488d-9ce1-e33df24cb470",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "43c44b62-692f-4d2e-95a4-56400d3a29b2",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar/serviceaccounts",
   "verb": "deletecollection",
@@ -2996,14 +342,14 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "4083f188-17a3-4d9a-9376-1246f47e0e3f",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "94fce7e0-7f7d-4e29-8141-5f2309cc29a0",
   "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/builder-token-7tvzr",
+  "verb": "delete",
   "user": {
     "username": "system:openshift-master",
     "groups": [
@@ -3017,6 +363,7 @@
   "objectRef": {
     "resource": "secrets",
     "namespace": "foobar",
+    "name": "builder-token-7tvzr",
     "apiVersion": "/v1"
   }
 }
@@ -3024,14 +371,14 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "4083f188-17a3-4d9a-9376-1246f47e0e3f",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets",
-  "verb": "create",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "e690f12f-ce52-4726-871d-540cc1dafdad",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/default-token-2tshm",
+  "verb": "delete",
   "user": {
     "username": "system:openshift-master",
     "groups": [
@@ -3045,23 +392,81 @@
   "objectRef": {
     "resource": "secrets",
     "namespace": "foobar",
-    "name": "deployer-token-wwhwl",
+    "name": "default-token-2tshm",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "94fce7e0-7f7d-4e29-8141-5f2309cc29a0",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/builder-token-7tvzr",
+  "verb": "delete",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "builder-token-7tvzr",
     "apiVersion": "/v1"
   },
   "responseStatus": {
     "metadata": {},
-    "code": 403
+    "code": 200
   }
 }
 {
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "690c8429-2505-43b1-b1d4-ba3bb305d093",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/builder-token-zls8h",
+  "verb": "delete",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "builder-token-zls8h",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "e0848774-c39c-488d-9ce1-e33df24cb470",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "43c44b62-692f-4d2e-95a4-56400d3a29b2",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar/serviceaccounts",
   "verb": "deletecollection",
@@ -3096,13 +501,199 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "1f8cee5e-4432-4fdf-93f7-969f6f2aa41d",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/deployer-token-8r9z6",
+  "verb": "delete",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "deployer-token-8r9z6",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "e690f12f-ce52-4726-871d-540cc1dafdad",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/default-token-2tshm",
+  "verb": "delete",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "default-token-2tshm",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "690c8429-2505-43b1-b1d4-ba3bb305d093",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/builder-token-zls8h",
+  "verb": "delete",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "builder-token-zls8h",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "ce9518d7-2dfd-42b6-b66b-f55c868ea045",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/default-token-8qgwj",
+  "verb": "delete",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "default-token-8qgwj",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "1f8cee5e-4432-4fdf-93f7-969f6f2aa41d",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/deployer-token-8r9z6",
+  "verb": "delete",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "deployer-token-8r9z6",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "0aec18ec-9749-4db3-8fd8-69ae9f1991d5",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/deployer-token-qqrxc",
+  "verb": "delete",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "deployer-token-qqrxc",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "b191cd4c-15d3-4827-8f72-14f914240f5c",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "d8e7bc41-9e92-41f6-a3a0-7ca6e88aadab",
   "stage": "RequestReceived",
-  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/ingresses",
+  "requestURI": "/api/v1/namespaces/foobar/secrets",
   "verb": "deletecollection",
   "user": {
     "username": "system:serviceaccount:kube-system:namespace-controller",
@@ -3117,7 +708,475 @@
     "127.0.0.1"
   ],
   "objectRef": {
-    "resource": "ingresses",
+    "resource": "secrets",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "ce9518d7-2dfd-42b6-b66b-f55c868ea045",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/default-token-8qgwj",
+  "verb": "delete",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "default-token-8qgwj",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "7cbaf653-70b7-4591-826f-59747a353f39",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/default-dockercfg-jw5gk",
+  "verb": "delete",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "default-dockercfg-jw5gk",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "0aec18ec-9749-4db3-8fd8-69ae9f1991d5",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/deployer-token-qqrxc",
+  "verb": "delete",
+  "user": {
+    "username": "system:openshift-master",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "deployer-token-qqrxc",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "7cbaf653-70b7-4591-826f-59747a353f39",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/default-dockercfg-jw5gk",
+  "verb": "delete",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "default-dockercfg-jw5gk",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "b265fa67-7726-4ebc-8253-9f583ab50cbf",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/builder-token-zls8h",
+  "verb": "delete",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "builder-token-zls8h",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "b265fa67-7726-4ebc-8253-9f583ab50cbf",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/builder-token-zls8h",
+  "verb": "delete",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "builder-token-zls8h",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 404
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "d8e7bc41-9e92-41f6-a3a0-7ca6e88aadab",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "64d084e5-9089-4823-9bbd-d92b574bb15a",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/default-token-2tshm",
+  "verb": "delete",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "default-token-2tshm",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "64d084e5-9089-4823-9bbd-d92b574bb15a",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/default-token-2tshm",
+  "verb": "delete",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "default-token-2tshm",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 404
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "89fc7a1e-4352-4d0e-8b97-526d9d1810bb",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/pods",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "pods",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "b4f860f7-6170-40a7-8242-842621321e6b",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/deployer-token-qqrxc",
+  "verb": "delete",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "deployer-token-qqrxc",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "89fc7a1e-4352-4d0e-8b97-526d9d1810bb",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/pods",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "pods",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Metadata",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "b4f860f7-6170-40a7-8242-842621321e6b",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/secrets/deployer-token-qqrxc",
+  "verb": "delete",
+  "user": {
+    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
+    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:openshift-infra",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "foobar",
+    "name": "deployer-token-qqrxc",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 404
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "f8b6ae1c-45d3-4bd6-9983-f53ebc9ec93b",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/daemonsets",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "daemonsets",
     "namespace": "foobar",
     "apiVersion": "extensions/v1beta1"
   }
@@ -3126,13 +1185,13 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "b191cd4c-15d3-4827-8f72-14f914240f5c",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "f8b6ae1c-45d3-4bd6-9983-f53ebc9ec93b",
   "stage": "ResponseComplete",
-  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/ingresses",
+  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/daemonsets",
   "verb": "deletecollection",
   "user": {
     "username": "system:serviceaccount:kube-system:namespace-controller",
@@ -3147,7 +1206,7 @@
     "127.0.0.1"
   ],
   "objectRef": {
-    "resource": "ingresses",
+    "resource": "daemonsets",
     "namespace": "foobar",
     "apiVersion": "extensions/v1beta1"
   },
@@ -3165,13 +1224,13 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "ae240347-8ad8-4637-92fd-000ded184e01",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "c484abff-c9f9-444c-a24e-b4363c64403a",
   "stage": "RequestReceived",
-  "requestURI": "/apis/batch/v2alpha1/namespaces/foobar/cronjobs",
+  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/replicasets",
   "verb": "deletecollection",
   "user": {
     "username": "system:serviceaccount:kube-system:namespace-controller",
@@ -3186,22 +1245,22 @@
     "127.0.0.1"
   ],
   "objectRef": {
-    "resource": "cronjobs",
+    "resource": "replicasets",
     "namespace": "foobar",
-    "apiVersion": "batch/v2alpha1"
+    "apiVersion": "extensions/v1beta1"
   }
 }
 {
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "ae240347-8ad8-4637-92fd-000ded184e01",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "c484abff-c9f9-444c-a24e-b4363c64403a",
   "stage": "ResponseComplete",
-  "requestURI": "/apis/batch/v2alpha1/namespaces/foobar/cronjobs",
+  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/replicasets",
   "verb": "deletecollection",
   "user": {
     "username": "system:serviceaccount:kube-system:namespace-controller",
@@ -3216,9 +1275,9 @@
     "127.0.0.1"
   ],
   "objectRef": {
-    "resource": "cronjobs",
+    "resource": "replicasets",
     "namespace": "foobar",
-    "apiVersion": "batch/v2alpha1"
+    "apiVersion": "extensions/v1beta1"
   },
   "responseStatus": {
     "metadata": {},
@@ -3226,7 +1285,7 @@
   },
   "requestObject": {
     "kind": "DeleteOptions",
-    "apiVersion": "batch/v2alpha1",
+    "apiVersion": "extensions/v1beta1",
     "propagationPolicy": "Background"
   }
 }
@@ -3234,701 +1293,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "86d231ab-3851-482a-9b9b-9dbd38fe07d5",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/batch/v2alpha1/namespaces/foobar/scheduledjobs",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "scheduledjobs",
-    "namespace": "foobar",
-    "apiVersion": "batch/v2alpha1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "86d231ab-3851-482a-9b9b-9dbd38fe07d5",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/batch/v2alpha1/namespaces/foobar/scheduledjobs",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "scheduledjobs",
-    "namespace": "foobar",
-    "apiVersion": "batch/v2alpha1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "batch/v2alpha1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "73d91a94-74e5-4a62-8196-f9274b27e69e",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "73d91a94-74e5-4a62-8196-f9274b27e69e",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "rolebindings",
-    "namespace": "foobar",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "rbac.authorization.k8s.io/v1beta1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "19da9fb2-d197-46f7-a4d0-94a77564fce5",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/image.openshift.io/v1/namespaces/foobar/imagestreams",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "imagestreams",
-    "namespace": "foobar",
-    "apiVersion": "image.openshift.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "19da9fb2-d197-46f7-a4d0-94a77564fce5",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/image.openshift.io/v1/namespaces/foobar/imagestreams",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "imagestreams",
-    "namespace": "foobar",
-    "apiVersion": "image.openshift.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "image.openshift.io/v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "489ee256-dd5e-4567-8876-54ee1d71bfbc",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/autoscaling/v1/namespaces/foobar/horizontalpodautoscalers",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "horizontalpodautoscalers",
-    "namespace": "foobar",
-    "apiVersion": "autoscaling/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "489ee256-dd5e-4567-8876-54ee1d71bfbc",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/autoscaling/v1/namespaces/foobar/horizontalpodautoscalers",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "horizontalpodautoscalers",
-    "namespace": "foobar",
-    "apiVersion": "autoscaling/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "autoscaling/v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "58577c68-8b7b-48d8-8011-f080fe640886",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/network.openshift.io/v1/namespaces/foobar/egressnetworkpolicies",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "egressnetworkpolicies",
-    "namespace": "foobar",
-    "apiVersion": "network.openshift.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "58577c68-8b7b-48d8-8011-f080fe640886",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/network.openshift.io/v1/namespaces/foobar/egressnetworkpolicies",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "egressnetworkpolicies",
-    "namespace": "foobar",
-    "apiVersion": "network.openshift.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "network.openshift.io/v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "a3881168-12a6-45d7-921f-f814a627dc45",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/build.openshift.io/v1/namespaces/foobar/buildconfigs",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "buildconfigs",
-    "namespace": "foobar",
-    "apiVersion": "build.openshift.io/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "a3881168-12a6-45d7-921f-f814a627dc45",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/build.openshift.io/v1/namespaces/foobar/buildconfigs",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "buildconfigs",
-    "namespace": "foobar",
-    "apiVersion": "build.openshift.io/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "build.openshift.io/v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "cd28a4d6-788e-4859-83d6-f6bbe2301923",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/pods",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "pods",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "cd28a4d6-788e-4859-83d6-f6bbe2301923",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/pods",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "pods",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "ed3328d2-aceb-445b-9c91-f69a71896fb5",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/podtemplates",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "podtemplates",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "ed3328d2-aceb-445b-9c91-f69a71896fb5",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/podtemplates",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "podtemplates",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "15ac2a93-1902-405e-9c93-9610304c4f05",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/replicationcontrollers",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "replicationcontrollers",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "15ac2a93-1902-405e-9c93-9610304c4f05",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/replicationcontrollers",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "replicationcontrollers",
-    "namespace": "foobar",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "v1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "087e528f-4f4c-41d8-9349-054c6f079458",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/policy/v1beta1/namespaces/foobar/poddisruptionbudgets",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "poddisruptionbudgets",
-    "namespace": "foobar",
-    "apiVersion": "policy/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "087e528f-4f4c-41d8-9349-054c6f079458",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/policy/v1beta1/namespaces/foobar/poddisruptionbudgets",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "poddisruptionbudgets",
-    "namespace": "foobar",
-    "apiVersion": "policy/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "policy/v1beta1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "893003b3-e96c-407d-b476-c0e48d198277",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "0b2d9cdc-3bc3-498d-ad1a-8c97e37d8469",
   "stage": "RequestReceived",
   "requestURI": "/apis/apps.openshift.io/v1/namespaces/foobar/deploymentconfigs",
   "verb": "deletecollection",
@@ -3954,11 +1323,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "893003b3-e96c-407d-b476-c0e48d198277",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "0b2d9cdc-3bc3-498d-ad1a-8c97e37d8469",
   "stage": "ResponseComplete",
   "requestURI": "/apis/apps.openshift.io/v1/namespaces/foobar/deploymentconfigs",
   "verb": "deletecollection",
@@ -3993,13 +1362,13 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "f6ec16d6-44fe-481f-9dff-5b457bdbbab5",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "0b9901c9-e796-4cdb-a9bd-89169199b37d",
   "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/resourcequotas",
+  "requestURI": "/apis/image.openshift.io/v1/namespaces/foobar/imagestreams",
   "verb": "deletecollection",
   "user": {
     "username": "system:serviceaccount:kube-system:namespace-controller",
@@ -4014,7 +1383,559 @@
     "127.0.0.1"
   ],
   "objectRef": {
-    "resource": "resourcequotas",
+    "resource": "imagestreams",
+    "namespace": "foobar",
+    "apiVersion": "image.openshift.io/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "0b9901c9-e796-4cdb-a9bd-89169199b37d",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/image.openshift.io/v1/namespaces/foobar/imagestreams",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "imagestreams",
+    "namespace": "foobar",
+    "apiVersion": "image.openshift.io/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "image.openshift.io/v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "d2e74363-969f-4655-b472-172646ded7ae",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/roles",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "roles",
+    "namespace": "foobar",
+    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "d2e74363-969f-4655-b472-172646ded7ae",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/roles",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "roles",
+    "namespace": "foobar",
+    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "rbac.authorization.k8s.io/v1beta1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "ae29c55e-4be1-42b7-80d2-6b64901b91ee",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/network.openshift.io/v1/namespaces/foobar/egressnetworkpolicies",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "egressnetworkpolicies",
+    "namespace": "foobar",
+    "apiVersion": "network.openshift.io/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "ae29c55e-4be1-42b7-80d2-6b64901b91ee",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/network.openshift.io/v1/namespaces/foobar/egressnetworkpolicies",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "egressnetworkpolicies",
+    "namespace": "foobar",
+    "apiVersion": "network.openshift.io/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "network.openshift.io/v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "2a176bb7-861e-4ba4-9688-f74269ee27fd",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/template.openshift.io/v1/namespaces/foobar/templateinstances",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "templateinstances",
+    "namespace": "foobar",
+    "apiVersion": "template.openshift.io/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "2a176bb7-861e-4ba4-9688-f74269ee27fd",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/template.openshift.io/v1/namespaces/foobar/templateinstances",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "templateinstances",
+    "namespace": "foobar",
+    "apiVersion": "template.openshift.io/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "template.openshift.io/v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "c6ace7ac-8035-4d06-b099-5f90224388e3",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/ingresses",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "ingresses",
+    "namespace": "foobar",
+    "apiVersion": "extensions/v1beta1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "c6ace7ac-8035-4d06-b099-5f90224388e3",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/ingresses",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "ingresses",
+    "namespace": "foobar",
+    "apiVersion": "extensions/v1beta1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "extensions/v1beta1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "f3715984-85cf-4d89-8831-5f54a0dee6f1",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/apps/v1beta1/namespaces/foobar/deployments",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "deployments",
+    "namespace": "foobar",
+    "apiVersion": "apps/v1beta1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "f3715984-85cf-4d89-8831-5f54a0dee6f1",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/apps/v1beta1/namespaces/foobar/deployments",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "deployments",
+    "namespace": "foobar",
+    "apiVersion": "apps/v1beta1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "apps/v1beta1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "68354ab1-2961-4852-a017-3bb328f35fbf",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/autoscaling/v1/namespaces/foobar/horizontalpodautoscalers",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "horizontalpodautoscalers",
+    "namespace": "foobar",
+    "apiVersion": "autoscaling/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "68354ab1-2961-4852-a017-3bb328f35fbf",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/autoscaling/v1/namespaces/foobar/horizontalpodautoscalers",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "horizontalpodautoscalers",
+    "namespace": "foobar",
+    "apiVersion": "autoscaling/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "autoscaling/v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "a434cf55-a39d-425e-91e6-d902ff692c00",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/networking.k8s.io/v1/namespaces/foobar/networkpolicies",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "networkpolicies",
+    "namespace": "foobar",
+    "apiVersion": "networking.k8s.io/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "a434cf55-a39d-425e-91e6-d902ff692c00",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/networking.k8s.io/v1/namespaces/foobar/networkpolicies",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "networkpolicies",
+    "namespace": "foobar",
+    "apiVersion": "networking.k8s.io/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "networking.k8s.io/v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "325df3e5-a695-45ec-9eda-57dc512067da",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/persistentvolumeclaims",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "persistentvolumeclaims",
     "namespace": "foobar",
     "apiVersion": "/v1"
   }
@@ -4023,13 +1944,13 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "f6ec16d6-44fe-481f-9dff-5b457bdbbab5",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "325df3e5-a695-45ec-9eda-57dc512067da",
   "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/resourcequotas",
+  "requestURI": "/api/v1/namespaces/foobar/persistentvolumeclaims",
   "verb": "deletecollection",
   "user": {
     "username": "system:serviceaccount:kube-system:namespace-controller",
@@ -4044,7 +1965,7 @@
     "127.0.0.1"
   ],
   "objectRef": {
-    "resource": "resourcequotas",
+    "resource": "persistentvolumeclaims",
     "namespace": "foobar",
     "apiVersion": "/v1"
   },
@@ -4062,11 +1983,494 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "830fb93e-53ab-4354-8d96-3e7cb699b15d",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "47521101-a7d2-460e-b7ce-6b1eb273972e",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/endpoints",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "endpoints",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "47521101-a7d2-460e-b7ce-6b1eb273972e",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/endpoints",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "endpoints",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "00abc6d8-c5ed-42ae-b3e3-f0134dba132f",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/replicationcontrollers",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "replicationcontrollers",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "00abc6d8-c5ed-42ae-b3e3-f0134dba132f",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/replicationcontrollers",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "replicationcontrollers",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "cc41dc1a-6ce7-425f-b184-4cd9c1d740ca",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/deployments",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "deployments",
+    "namespace": "foobar",
+    "apiVersion": "extensions/v1beta1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "cc41dc1a-6ce7-425f-b184-4cd9c1d740ca",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/extensions/v1beta1/namespaces/foobar/deployments",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "deployments",
+    "namespace": "foobar",
+    "apiVersion": "extensions/v1beta1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "extensions/v1beta1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "03b8f8a8-a1f6-47a9-a34b-4f05b5e622d3",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/apps/v1beta1/namespaces/foobar/controllerrevisions",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "controllerrevisions",
+    "namespace": "foobar",
+    "apiVersion": "apps/v1beta1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "03b8f8a8-a1f6-47a9-a34b-4f05b5e622d3",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/apps/v1beta1/namespaces/foobar/controllerrevisions",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "controllerrevisions",
+    "namespace": "foobar",
+    "apiVersion": "apps/v1beta1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "apps/v1beta1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "9376c57f-a2b2-455f-aec2-9263f22b5bcb",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/batch/v2alpha1/namespaces/foobar/cronjobs",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "cronjobs",
+    "namespace": "foobar",
+    "apiVersion": "batch/v2alpha1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "9376c57f-a2b2-455f-aec2-9263f22b5bcb",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/batch/v2alpha1/namespaces/foobar/cronjobs",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "cronjobs",
+    "namespace": "foobar",
+    "apiVersion": "batch/v2alpha1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "batch/v2alpha1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "79df961f-8d36-4d69-9bd1-2b48a2beb0b5",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/template.openshift.io/v1/namespaces/foobar/templates",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "templates",
+    "namespace": "foobar",
+    "apiVersion": "template.openshift.io/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "79df961f-8d36-4d69-9bd1-2b48a2beb0b5",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/template.openshift.io/v1/namespaces/foobar/templates",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "templates",
+    "namespace": "foobar",
+    "apiVersion": "template.openshift.io/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "template.openshift.io/v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "01b4bb68-d69f-4b85-9eb4-ca6b807cb951",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/batch/v2alpha1/namespaces/foobar/scheduledjobs",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "scheduledjobs",
+    "namespace": "foobar",
+    "apiVersion": "batch/v2alpha1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "01b4bb68-d69f-4b85-9eb4-ca6b807cb951",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/batch/v2alpha1/namespaces/foobar/scheduledjobs",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "scheduledjobs",
+    "namespace": "foobar",
+    "apiVersion": "batch/v2alpha1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "batch/v2alpha1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "568c398c-b5e2-4d8b-9262-cae34e055987",
   "stage": "RequestReceived",
   "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindingrestrictions",
   "verb": "deletecollection",
@@ -4092,11 +2496,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "830fb93e-53ab-4354-8d96-3e7cb699b15d",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "568c398c-b5e2-4d8b-9262-cae34e055987",
   "stage": "ResponseComplete",
   "requestURI": "/apis/authorization.openshift.io/v1/namespaces/foobar/rolebindingrestrictions",
   "verb": "deletecollection",
@@ -4131,11 +2535,149 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "b415b1a7-4788-4fa7-b5d3-140427a9146c",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "d47bb992-e17b-4037-9698-a746bda07604",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "rolebindings",
+    "namespace": "foobar",
+    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "d47bb992-e17b-4037-9698-a746bda07604",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/rbac.authorization.k8s.io/v1beta1/namespaces/foobar/rolebindings",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "rolebindings",
+    "namespace": "foobar",
+    "apiVersion": "rbac.authorization.k8s.io/v1beta1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "rbac.authorization.k8s.io/v1beta1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "2d6894a1-9fca-4340-9dfc-45326d9500d7",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/route.openshift.io/v1/namespaces/foobar/routes",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "routes",
+    "namespace": "foobar",
+    "apiVersion": "route.openshift.io/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "2d6894a1-9fca-4340-9dfc-45326d9500d7",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/route.openshift.io/v1/namespaces/foobar/routes",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "routes",
+    "namespace": "foobar",
+    "apiVersion": "route.openshift.io/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "route.openshift.io/v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "247f03f8-35a2-48db-b7b2-971262063517",
   "stage": "RequestReceived",
   "requestURI": "/apis/apps/v1beta1/namespaces/foobar/statefulsets",
   "verb": "deletecollection",
@@ -4161,11 +2703,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "b415b1a7-4788-4fa7-b5d3-140427a9146c",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "247f03f8-35a2-48db-b7b2-971262063517",
   "stage": "ResponseComplete",
   "requestURI": "/apis/apps/v1beta1/namespaces/foobar/statefulsets",
   "verb": "deletecollection",
@@ -4200,11 +2742,425 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "e2d8e350-56da-4ce3-995c-a537f3ea8914",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "8fff3b27-1844-47ca-916b-5b1d600bfe84",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/batch/v1/namespaces/foobar/jobs",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "jobs",
+    "namespace": "foobar",
+    "apiVersion": "batch/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "8fff3b27-1844-47ca-916b-5b1d600bfe84",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/batch/v1/namespaces/foobar/jobs",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "jobs",
+    "namespace": "foobar",
+    "apiVersion": "batch/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "batch/v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "b9c0c74a-d028-4a3b-b35f-0807ca1d9e2d",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/policy/v1beta1/namespaces/foobar/poddisruptionbudgets",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "poddisruptionbudgets",
+    "namespace": "foobar",
+    "apiVersion": "policy/v1beta1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "b9c0c74a-d028-4a3b-b35f-0807ca1d9e2d",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/policy/v1beta1/namespaces/foobar/poddisruptionbudgets",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "poddisruptionbudgets",
+    "namespace": "foobar",
+    "apiVersion": "policy/v1beta1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "policy/v1beta1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "02165abf-6742-4367-9b3e-45958e64e79c",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/resourcequotas",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "resourcequotas",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "02165abf-6742-4367-9b3e-45958e64e79c",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/resourcequotas",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "resourcequotas",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "adfa289d-92fa-473f-a66e-7841cd237900",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/build.openshift.io/v1/namespaces/foobar/builds",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "builds",
+    "namespace": "foobar",
+    "apiVersion": "build.openshift.io/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "adfa289d-92fa-473f-a66e-7841cd237900",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/build.openshift.io/v1/namespaces/foobar/builds",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "builds",
+    "namespace": "foobar",
+    "apiVersion": "build.openshift.io/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "build.openshift.io/v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "43fdad35-0d6d-44c3-a252-fffa9de9243e",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/limitranges",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "limitranges",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "43fdad35-0d6d-44c3-a252-fffa9de9243e",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/limitranges",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "limitranges",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "20883d6a-4852-4bc8-aec3-26d0b04541ed",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/foobar/podtemplates",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "podtemplates",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "20883d6a-4852-4bc8-aec3-26d0b04541ed",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/foobar/podtemplates",
+  "verb": "deletecollection",
+  "user": {
+    "username": "system:serviceaccount:kube-system:namespace-controller",
+    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:kube-system",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "127.0.0.1"
+  ],
+  "objectRef": {
+    "resource": "podtemplates",
+    "namespace": "foobar",
+    "apiVersion": "/v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestObject": {
+    "kind": "DeleteOptions",
+    "apiVersion": "v1",
+    "propagationPolicy": "Background"
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1alpha1",
+  "metadata": {
+    "creationTimestamp": "2018-01-19T01:07:04Z"
+  },
+  "level": "Request",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "53c84ffa-4ca1-4258-8cfd-a3d32c057b24",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar/configmaps",
   "verb": "deletecollection",
@@ -4230,11 +3186,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "e2d8e350-56da-4ce3-995c-a537f3ea8914",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "53c84ffa-4ca1-4258-8cfd-a3d32c057b24",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar/configmaps",
   "verb": "deletecollection",
@@ -4269,80 +3225,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "dec25072-2683-496f-88a6-face47f985a4",
-  "stage": "RequestReceived",
-  "requestURI": "/apis/apps/v1beta1/namespaces/foobar/deployments",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "deployments",
-    "namespace": "foobar",
-    "apiVersion": "apps/v1beta1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Request",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "dec25072-2683-496f-88a6-face47f985a4",
-  "stage": "ResponseComplete",
-  "requestURI": "/apis/apps/v1beta1/namespaces/foobar/deployments",
-  "verb": "deletecollection",
-  "user": {
-    "username": "system:serviceaccount:kube-system:namespace-controller",
-    "uid": "9612cc0d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:kube-system",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "deployments",
-    "namespace": "foobar",
-    "apiVersion": "apps/v1beta1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 200
-  },
-  "requestObject": {
-    "kind": "DeleteOptions",
-    "apiVersion": "apps/v1beta1",
-    "propagationPolicy": "Background"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "291deaf7-804d-4f65-91db-c7dfd34606ac",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "c066c867-7d44-4ece-94c7-df36cf90cd4a",
   "stage": "RequestReceived",
   "requestURI": "/api/v1/namespaces/foobar",
   "verb": "delete",
@@ -4369,11 +3256,11 @@
   "kind": "Event",
   "apiVersion": "audit.k8s.io/v1alpha1",
   "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
+    "creationTimestamp": "2018-01-19T01:07:04Z"
   },
   "level": "RequestResponse",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "291deaf7-804d-4f65-91db-c7dfd34606ac",
+  "timestamp": "2018-01-19T01:07:04Z",
+  "auditID": "c066c867-7d44-4ece-94c7-df36cf90cd4a",
   "stage": "ResponseComplete",
   "requestURI": "/api/v1/namespaces/foobar",
   "verb": "delete",
@@ -4403,7 +3290,7 @@
     "kind": "DeleteOptions",
     "apiVersion": "v1",
     "preconditions": {
-      "uid": "ec210de3-fc34-11e7-bdf2-9cb6d0f00109"
+      "uid": "a650db95-fcb4-11e7-8974-9cb6d0f00109"
     }
   },
   "responseObject": {
@@ -4412,220 +3299,22 @@
     "metadata": {
       "name": "foobar",
       "selfLink": "/api/v1/namespaces/foobar",
-      "uid": "ec210de3-fc34-11e7-bdf2-9cb6d0f00109",
-      "resourceVersion": "134173",
-      "creationTimestamp": "2018-01-18T09:49:48Z",
-      "deletionTimestamp": "2018-01-18T09:50:39Z",
+      "uid": "a650db95-fcb4-11e7-8974-9cb6d0f00109",
+      "resourceVersion": "190256",
+      "creationTimestamp": "2018-01-19T01:04:07Z",
+      "deletionTimestamp": "2018-01-19T01:06:59Z",
       "annotations": {
         "openshift.io/description": "",
         "openshift.io/display-name": "",
         "openshift.io/requester": "developer",
-        "openshift.io/sa.scc.mcs": "s0:c13,c7",
-        "openshift.io/sa.scc.supplemental-groups": "1000170000/10000",
-        "openshift.io/sa.scc.uid-range": "1000170000/10000"
+        "openshift.io/sa.scc.mcs": "s0:c12,c4",
+        "openshift.io/sa.scc.supplemental-groups": "1000140000/10000",
+        "openshift.io/sa.scc.uid-range": "1000140000/10000"
       }
     },
     "spec": {},
     "status": {
       "phase": "Terminating"
     }
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "ae0e6284-2408-40a8-a420-dea7a363dd6d",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/builder-token-vvbzq",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
-    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:openshift-infra",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "builder-token-vvbzq",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "ae0e6284-2408-40a8-a420-dea7a363dd6d",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/builder-token-vvbzq",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
-    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:openshift-infra",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "builder-token-vvbzq",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 404
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "ef9fd858-4645-4e47-8c95-f3138458315a",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/default-token-fzhdj",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
-    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:openshift-infra",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "default-token-fzhdj",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "ef9fd858-4645-4e47-8c95-f3138458315a",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/default-token-fzhdj",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
-    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:openshift-infra",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "default-token-fzhdj",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 404
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "9f977fa4-e0e0-48eb-8ed3-9607ff9ea5f7",
-  "stage": "RequestReceived",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/deployer-token-4hcb7",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
-    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:openshift-infra",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "deployer-token-4hcb7",
-    "apiVersion": "/v1"
-  }
-}
-{
-  "kind": "Event",
-  "apiVersion": "audit.k8s.io/v1alpha1",
-  "metadata": {
-    "creationTimestamp": "2018-01-18T09:50:44Z"
-  },
-  "level": "Metadata",
-  "timestamp": "2018-01-18T09:50:44Z",
-  "auditID": "9f977fa4-e0e0-48eb-8ed3-9607ff9ea5f7",
-  "stage": "ResponseComplete",
-  "requestURI": "/api/v1/namespaces/foobar/secrets/deployer-token-4hcb7",
-  "verb": "delete",
-  "user": {
-    "username": "system:serviceaccount:openshift-infra:serviceaccount-pull-secrets-controller",
-    "uid": "967d408d-fb17-11e7-ade4-9cb6d0f00109",
-    "groups": [
-      "system:serviceaccounts",
-      "system:serviceaccounts:openshift-infra",
-      "system:authenticated"
-    ]
-  },
-  "sourceIPs": [
-    "127.0.0.1"
-  ],
-  "objectRef": {
-    "resource": "secrets",
-    "namespace": "foobar",
-    "name": "deployer-token-4hcb7",
-    "apiVersion": "/v1"
-  },
-  "responseStatus": {
-    "metadata": {},
-    "code": 404
   }
 }

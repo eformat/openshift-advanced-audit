@@ -10,7 +10,9 @@ Latest Document links:
 - https://docs.openshift.org/latest/install_config/master_node_configuration.html#master-node-config-advanced-audit
 - https://kubernetes.io/docs/tasks/debug-application-cluster/audit/#advanced-audit
 
-Tested api version against OCP-3.7.14 (audit.k8s.io/v1alpha1) - upstream 1.8/1.9 (audit.k8s.io/v1beta1)
+API Versions
+- Current api version OCP-3.7.14 (audit.k8s.io/v1alpha1)
+- Upstream 1.8/1.9 (audit.k8s.io/v1beta1)
 
 Advanced audit helps answer the questions:
 
@@ -102,35 +104,35 @@ The folder `./audit-logs` contains some generated audit logs from a `oc cluster 
 ```
 -- tests
 oc login -u '' -p '' https://localhost:8443
-sudo tail -f /var/log/openshift/advanced-audit.log | jq . >> empty-login-cli.json
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log | jq . >> empty-login-cli.json
 
 oc login -u developer -p developer https://localhost:8443
-sudo tail -f /var/log/openshift/advanced-audit.log | jq . >> login-cli.json
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log | jq . >> login-cli.json
 
 oc logout
-sudo tail -f /var/log/openshift/advanced-audit.log | jq . >> logout-cli.json
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log | jq . >> logout-cli.json
 
 oc new-project foobar
-sudo tail -f /var/log/openshift/advanced-audit.log | jq . >> new-project-cli.json
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log | jq . >> new-project-cli.json
 
 oc delete project foobar
-sudo tail -f /var/log/openshift/advanced-audit.log | jq . >> delete-project-cli.json
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log | jq . >> delete-project-cli.json
 
 oc create secret generic my-secret --from-literal=key1=supersecret --from-literal=key2=topsecret
-sudo tail -f /var/log/openshift/advanced-audit.log | jq . >> new-secret-cli.json
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log | jq . >> new-secret-cli.json
 
 oc delete secret  my-secret
-sudo tail -f /var/log/openshift/advanced-audit.log | jq . >> delete-secret-cli.json
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log | jq . >> delete-secret-cli.json
 
 oc create sa abc-service-account
-sudo tail -f /var/log/openshift/advanced-audit.log | jq . >> create-sa-cli.json
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log | jq . >> create-sa-cli.json
 
 oc policy add-role-to-user view system:serviceaccount:$(oc project -q):abc-service-account
-sudo tail -f /var/log/openshift/advanced-audit.log | jq . >> add-role-sa-cli.json
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log | jq . >> add-role-sa-cli.json
 
 oc policy remove-role-from-user view system:serviceaccount:$(oc project -q):abc-service-account
-sudo tail -f /var/log/openshift/advanced-audit.log | jq . >> remove-role-sa-cli.json
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log | jq . >> remove-role-sa-cli.json
 
 oc delete sa abc-service-account
-sudo tail -f /var/log/openshift/advanced-audit.log | jq . >> delete-sa-cli.json
+sudo tail -n0 -f /var/log/openshift/advanced-audit.log | jq . >> delete-sa-cli.json
 ```
